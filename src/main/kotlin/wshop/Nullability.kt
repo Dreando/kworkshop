@@ -1,6 +1,7 @@
 package wshop
 
 class Result(val value: Any)
+
 class NullableResult(val value: Any?)
 
 fun main(args: Array<String>) {
