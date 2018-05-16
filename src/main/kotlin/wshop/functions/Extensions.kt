@@ -7,5 +7,5 @@ fun String.pokemonize(): String {
 }
 
 fun main(args: Array<String>) {
-    println("Szczupak to król wód, jak lew jest król dżungli".pokemonize())
+    println("Szczupak jest król wód, jak lew jest król dżungli".pokemonize())
 }
