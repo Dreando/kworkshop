@@ -15,6 +15,7 @@ fun main(args: Array<String>) {
 
     val res = getResult(1)
 
+    // smart cast applied here too
     when (res) {
         is Success -> println("Great success my friend! BTW I'm smart casted now, look: $res")
         is Failure -> println("Nope, try again man")
