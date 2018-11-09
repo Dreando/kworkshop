@@ -22,13 +22,25 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile group: 'no.tornado', name: 'tornadofx', version: '1.7.16'
     compile group: 'com.github.thomasnield', name: 'rxkotlinfx', version: '2.2.2'
-
+    compile group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-core', version: '1.0.1'
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = [
+                "-Xuse-experimental=kotlin.Experimental",
+                "-Xuse-experimental=kotlin.contracts.ExperimentalContracts",
+        ]
+    }
 }
 
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = [
+                "-Xuse-experimental=kotlin.Experimental",
+                "-Xuse-experimental=kotlin.contracts.ExperimentalContracts",
+        ]
+    }
 }

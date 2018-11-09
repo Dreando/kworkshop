@@ -1,23 +1,20 @@
 package wshop
 
-@Suppress("IfThenToSafeAccess")
 fun main(args: Array<String>) {
 
     // Smart casts from nullable types
-    val anything: String? = "Marek Licyniusz Krassus"
+    val maybeSomething: String? = "Marcuss Licyniusz Krassus"
 
     //anything.toUpperCase()
 
-    if(anything != null) {
-        anything.toUpperCase()
+    if(maybeSomething != null) {
+        maybeSomething.toUpperCase()
     }
 
     // Smart casts from other types
-
-    val maybeString: Any? = "Aloha"
+    val maybeString: Any = "Aloha"
 
     if(maybeString is String) {
         maybeString.toUpperCase()
     }
-
 }

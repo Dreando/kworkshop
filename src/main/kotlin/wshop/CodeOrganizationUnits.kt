@@ -25,13 +25,11 @@ fun main(args: Array<String>) {
 // Companion object - singleton instance friend of particular class, thus has access to its private members
 class ComplexType {
 
-
     class ComplexTypeInner {
 
         class ComplexTypeInnerInner {
 
         }
-
     }
 
     companion object ComplexType {
