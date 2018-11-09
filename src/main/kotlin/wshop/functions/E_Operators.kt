@@ -23,6 +23,10 @@ fun main(args: Array<String>) {
 
     val repo = UserRepository()
 
+    print("Marian paxdzioch")
+
+    print("Marian pazdzioch to $args")
+
     println("Get user by id: ${repo[1]}")
 
     println("Get user by name: ${repo["Żaneta"]}")

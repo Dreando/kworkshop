@@ -7,9 +7,9 @@ fun aFunction(param1: (Int) -> String, param2: Int) {
 
 fun main(args: Array<String>) {
 
-    fun param1ExplicitlyDeclared(x: Int) = (x * 2).toString()
+    fun functional1ExplicitlyDeclared(x: Int) = (x * 2).toString()
 
-    aFunction(::param1ExplicitlyDeclared, 3)
+    aFunction(::functional1ExplicitlyDeclared, 3)
 
     aFunction({ arg -> arg.toString() }, 3)
 }

@@ -1,7 +1,7 @@
 package wshop.keywords
 
 inline fun <reified T> genericFun(param: T) {
-    println("The generic type is: ${T::class.java}")
+    println("The generic type is: ${T::class}")
 }
 
 fun main(args: Array<String>) {
@@ -10,5 +10,4 @@ fun main(args: Array<String>) {
     genericFun("Gdynia")
     genericFun(3)
     genericFun("Świnia")
-
 }

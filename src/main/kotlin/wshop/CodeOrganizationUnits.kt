@@ -25,8 +25,17 @@ fun main(args: Array<String>) {
 // Companion object - singleton instance friend of particular class, thus has access to its private members
 class ComplexType {
 
-    companion object {
-        fun create(param1: Any, param2: Any): ComplexType {
+
+    class ComplexTypeInner {
+
+        class ComplexTypeInnerInner {
+
+        }
+
+    }
+
+    companion object ComplexType {
+        fun create(param1: Any, param2: Any): wshop.ComplexType {
             return ComplexType()
         }
     }
@@ -34,4 +43,7 @@ class ComplexType {
 
 fun main2() {
     ComplexType.create(1,2)
+
+    val ct = ComplexType()
+    val ct2 = ComplexType()
 }

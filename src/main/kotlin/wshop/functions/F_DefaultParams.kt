@@ -5,7 +5,6 @@ fun buildBuilding(
         roofType: Any,
         elevationColor: Any = "Grey",
         roomsNumber: Int
-
 ) {
     // Do some very advanced engineering stuff here
 }
@@ -13,6 +12,8 @@ fun buildBuilding(
 fun main(args: Array<String>) {
 
     buildBuilding(3, "Sloping", "Red", 3)
+
+    buildBuilding(roofType = "Unknown", roomsNumber = 3)
 
     buildBuilding(
             floorsNumber = 5,
@@ -27,6 +28,4 @@ fun main(args: Array<String>) {
             roofType = "Flat",
             floorsNumber = 5
     )
-
-    buildBuilding(roofType = "Sloping", roomsNumber = 5)
 }

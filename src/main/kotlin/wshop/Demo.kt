@@ -1,7 +1,7 @@
 package wshop
 
-import com.github.thomasnield.rxkotlinfx.actionEvents
-import javafx.application.Application
+import com.github.thomasnield.rxkotlinfx.events
+import javafx.scene.input.ScrollEvent
 import tornadofx.*
 
 class MyApp : App(MyView::class)
@@ -10,18 +10,15 @@ class MyView : View() {
 
     override val root = vbox {
 
-        val countingLabel = label("0")
-        var counter = 0
+        button(text = "Press me bitte")
+                .events(ScrollEvent.SCROLL)
+                .subscribe {
+                    println("Last delta: Y[${it.deltaY}]")
+                }
 
-        button("Press me bitte")
-                .actionEvents()
-                .subscribe({
-                    counter += 1
-                    countingLabel.text = counter.toString()
-                })
     }
 }
 
 fun main(args: Array<String>) {
-    Application.launch(MyApp::class.java, *args)
+    launch<MyApp>(args)
 }

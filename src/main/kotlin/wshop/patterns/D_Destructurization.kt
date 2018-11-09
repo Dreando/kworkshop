@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
 
     val (name2, surname2, characterClass) = triple
 
-    val (name3, surname3, age) = Human("Arnold", "Boczek", 40)
+    val (name3, _, _) = Human("Arnold", "Boczek", 40)
 
     val someMap = mapOf(
             1 to "First",
@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
     )
 
     someMap.map {entry ->
-        val (key, value) = entry
+        val (key, _) = entry
     }
 
     for((key, value) in someMap) {
